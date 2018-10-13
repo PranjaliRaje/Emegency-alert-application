@@ -17,8 +17,8 @@ app = Flask(__name__)
 project = pushpad.Pushpad(auth_token='3e7558829ba95991c3ae0cd137566a40', project_id=5744)
 # Config MySQL
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
-app.config['MYSQL_DATABASE_USER'] = 'root'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'root'
+app.config['MYSQL_DATABASE_USER'] = '<pwd>'
+app.config['MYSQL_DATABASE_PASSWORD'] = '<pwd>'
 app.config['MYSQL_DATABASE_DB'] = 'data'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 # init MYSQL
@@ -29,7 +29,7 @@ mysql.init_app(app)
 stemmer = nltk.stem.porter.PorterStemmer()
 remove_punctuation_map = dict((ord(char), None) for char in string.punctuation)
 gmail_user = 'sjalerts.app@gmail.com'  
-gmail_pwd = 'rootroot'
+gmail_pwd = '<pwd>'
 UPLOAD_FOLDER = 'static/uploads'
 ALLOWED_EXTENSIONS = set(['jpeg', 'jpg', 'png', 'gif'])
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
