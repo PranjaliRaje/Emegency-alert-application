@@ -14,7 +14,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 app = Flask(__name__)
 
-project = pushpad.Pushpad(auth_token='3e7558829ba95991c3ae0cd137566a40', project_id=5744)
+project = pushpad.Pushpad(auth_token='<auth Token>', project_id=5744)
 # Config MySQL
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 app.config['MYSQL_DATABASE_USER'] = '<pwd>'
